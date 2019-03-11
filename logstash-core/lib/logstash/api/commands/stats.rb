@@ -113,6 +113,7 @@ module LogStash
           def report(stats)
             {
               :ephemeral_id => stats[:config][:ephemeral_id],
+              :hash => stats[:config][:hash],
               :events => stats[:events],
               :plugins => {
                 :inputs => plugin_stats(stats, :inputs),
